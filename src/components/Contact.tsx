@@ -1,7 +1,6 @@
 import { useData } from "@/hooks/useData";
 import type { ContactInfo } from "@/types/contact";
 import { LoadingSpinner } from "@/components/ui/loading-spinner";
-import { ErrorBoundary } from "@/components/ui/error-boundary";
 
 export default function Contact() {
   const {
@@ -25,7 +24,7 @@ export default function Contact() {
             Get in Touch
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">
-            Let's connect and discuss how we can work together
+            Let&apos;s connect and discuss how we can work together
           </p>
         </div>
 

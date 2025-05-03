@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useData } from "@/hooks/useData";
 import type { Certification } from "@/types/certifications";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -39,10 +40,12 @@ export default function Certifications() {
                 className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-300 dark:border-gray-700"
               >
                 <div className="relative w-24 h-24 mx-auto mb-4">
-                  <img
+                  <Image
                     src={cert.badgeUrl}
                     alt={`${cert.title} badge`}
-                    className="w-full h-full object-contain"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 96px) 100vw, 96px"
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
